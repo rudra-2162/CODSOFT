@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter marks obtained out of 100 in each subject");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        int e = sc.nextInt();
+
+        int total = a + b + c + d + e;
+
+        System.out.println("Total marks = " + total);
+
+        float percentage = ((float) total / 5); 
+
+        System.out.println("Average percentage = " + percentage);
+
+        if (percentage < 35) {
+            System.out.println("Fail");
+        } else if (percentage <= 50) {
+            System.out.println("C Grade");
+        } else if (percentage <= 75) {
+            System.out.println("B Grade");
+        } else if (percentage <= 90) {
+            System.out.println("A Grade");
+        } else {
+            System.out.println("A+ Grade");
+        }
+    }
+}
